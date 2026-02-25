@@ -139,7 +139,7 @@ docker-compose up -d --build
 docker-compose -f docker-compose.dev.yml up -d --build
 ```
 
-### Доступ к сервисам
+### Доступ к сервисаи
 
 - Frontend: http://localhost:3000 (production) / http://localhost:5173 (dev)
 - Backend API: http://localhost:8000
@@ -162,3 +162,8 @@ docker-compose -f docker-compose.dev.yml up -d --build
 | Суть вопроса | Краткое описание проблемы или запроса |
 | Ответ | Сгенерированный или отредактированный ответ |
 | Статус | Новое, в работе, отправлено |
+
+Риски
+
+Отсутсвие опыта.
+Унас монолитная система из-за чего есть шанс, что если одна часть полетит, то полетит вся системя. Микро сервис долго поднимать 
