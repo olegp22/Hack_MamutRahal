@@ -11,7 +11,7 @@ class User(UserBase):
     id: int
 
 
-class UserCreate(UserBase):
+class UserSingup(UserBase):
     pass
 
 

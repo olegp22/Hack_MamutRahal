@@ -1,4 +1,4 @@
-from schema import User, UserCreate
+from schema import User, UserSingup
 from fastapi import FastAPI, Body
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Annotated
@@ -19,7 +19,7 @@ app.middleware(
 
 
 @app.post('/user')
-async def user(user: Annotated[UserCreate,
+async def user(user: Annotated[UserSingup,
     Body(..., example={
         'login': 'UserName',
         'password': 'yourPassword'
