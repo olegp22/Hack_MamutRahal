@@ -1,9 +1,7 @@
-CREATE EXTENSION IF NOT EXISTS citext;
 
 CREATE TABLE IF NOT EXISTS user (
 id serial PRIMARY KEY,
-name varchar(150),
-email citext UNIQUE NOT NULL,
+login varchar(150) UNIQUE NOT NULL,
 password text
 );
 
@@ -23,11 +21,9 @@ CREATE TABLE IF NOT EXISTS message(
 id serial PRIMARY KEY,
 date timestamp,
 name_from varchar(150),
-email citext NOT NULL,
+email varchar(150) NOT NULL,
 phone varchar(17),
 object VARCHAR(100) REFERENCES object(id),
 emotion int REFERENCES emotion(id),
 part text
 );
-
-
